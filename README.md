@@ -22,3 +22,13 @@ $ npm run serve
     "lint": "vue-cli-service lint"
   },
 ```
+
+- 프론트 서버 포트 변경
+  - front-end디렉토리 하위에 vue.config.js 파일 생성후
+```js
+module.exports = {
+  devServer : {
+    port: 3000
+  }
+}
+```
