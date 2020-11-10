@@ -1,7 +1,7 @@
 # Set up Vue.js command line
 `$ npm install -g @vue/cli`    
 
-![vue setting](src/main/resources/static/img/vue-setting.png)
+![vue setting](front-end/public/static/images/vue-setting.png)
 
 - 실행
 ```shell script

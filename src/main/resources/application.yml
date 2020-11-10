@@ -1,2 +1,25 @@
+
+
+
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vuespring?serverTimezone=Asia/Seoul
+    username: <change to your own username>
+    password: <change to your own password>
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vuespring?serverTimezone=Asia/Seoul
+    username: root
+    password: mysql
+
 server:
   port: 8181
