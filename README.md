@@ -32,3 +32,30 @@ module.exports = {
   }
 }
 ```
+
+- 부트스트랩 설치
+`$ npm install jquery popper.js bootstrap --save`
+
+  - vue.config.js 수정
+```js
+module.exports = {
+  devServer : {
+    port: 3000,
+    proxy : {
+      '/api/*': {
+        target: 'http://localhost:8181'
+      }
+    }    
+  },
+  configureWebpack: {
+    entry: {
+      app: './src/main.js',
+      style: [
+        'bootstrap/dist/css/bootstrap.min.css'
+      ]
+    }
+  }
+}
+
+
+```
