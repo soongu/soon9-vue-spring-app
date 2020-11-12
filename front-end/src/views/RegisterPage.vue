@@ -6,18 +6,18 @@
         <img class="logo" src="/static/images/logo.png">
         <div class="tagline">Open source task management tool</div>
       </div>
-      <form action="#">
+      <form @submit.prevent="submitForm">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" class="form-control" id="username">
+          <input type="text" class="form-control" id="username" v-model="form.username">
         </div>
         <div class="form-group">
           <label for="emailAddress">Email address</label>
-          <input type="email" class="form-control" id="emailAddress">
+          <input type="email" class="form-control" id="emailAddress" v-model="form.emailAddress">
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password">
+          <input type="password" class="form-control" id="password" v-model="form.password">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Create account</button>
         <p class="accept-terms text-muted">By clicking “Create account”, you agree to our <a href="#">terms of service</a> and <a href="#">privacy policy</a>.</p>
@@ -39,7 +39,21 @@
 
 <script>
 export default {
-  name: 'RegisterPage'
+  name: 'RegisterPage',
+  data: function () {
+    return {
+      form: {
+        username: '',
+        emailAddress: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+    submitForm() {
+
+    }
+  }
 }
 </script>
 

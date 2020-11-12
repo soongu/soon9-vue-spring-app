@@ -59,3 +59,6 @@ module.exports = {
 
 
 ```
+
+- vue 공식 단위 테스트 유틸 라이브러리 설치 
+`$ npm install @vue/test-utils -D`
